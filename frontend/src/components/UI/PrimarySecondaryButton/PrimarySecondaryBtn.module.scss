@@ -1,0 +1,55 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.button {
+  padding: 10px;
+  width: 70px;
+  font-family: $poppins;
+  border: none;
+  border-radius: 10px;
+  background-color: $blueLight;
+  color: $blue;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: $greyWhite;
+    color: $darkLight;
+    cursor: unset;
+    &:hover {
+      background-color: $greyWhite;
+    }
+  }
+
+  div {
+    margin: auto;
+    height: 16px;
+    width: 30px;
+  }
+
+  @include MediaQuery($desktop) {
+    padding: 8px;
+    font-size: 0.55em;
+  }
+}
+
+.loading {
+  @include buttonLoading;
+}
+
+.primary {
+  background-color: $blue;
+  color: $white;
+
+  &:hover {
+    background-color: darken($blue, 12);
+  }
+}
+
+.secondary {
+  background-color: $blueLight;
+  color: $blue;
+
+  &:hover {
+    background-color: darken($blueLight, 6);
+  }
+}

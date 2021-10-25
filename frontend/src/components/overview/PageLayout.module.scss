@@ -1,0 +1,55 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.layout {
+  @include MediaQuery($desktop) {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 65% 35%;
+  }
+}
+
+.totalBalanceBarChartContainer {
+  width: 100vw;
+  height: calc(100vh - 60px); // -60px is for header
+  max-height: 500px;
+
+  @include MediaQuery($desktop) {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+  }
+}
+
+.todayIncomeSpentContainer {
+  width: 100vw;
+  height: calc(100vh - 60px); // -60px for header
+  max-height: 500px;
+
+  @include MediaQuery($desktop) {
+    display: flex;
+    margin-bottom: 0;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    grid-column-start: 2;
+  }
+}
+
+.biggestExpenseCategoryContainer {
+  width: 100vw;
+  height: calc(100vh - 60px); // -60px is for header
+
+  @include MediaQuery($desktop) {
+    margin-bottom: 0;
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}

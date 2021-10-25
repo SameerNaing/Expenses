@@ -1,0 +1,67 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.inputContainer {
+  width: 100%;
+  margin-top: 12px;
+
+  @include MediaQuery($desktop) {
+    margin-top: 0;
+  }
+}
+
+.label {
+  display: block;
+  font-family: $openSans;
+  font-weight: 700;
+  font-size: 0.8em;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.55em;
+    font-weight: 800;
+  }
+}
+
+.labelDisable {
+  opacity: 0.5;
+}
+
+.input {
+  margin-top: 6px;
+  width: 100%;
+  min-height: 35px;
+  padding: 5px;
+  font-family: $poppins;
+  font-size: 0.9em;
+  border: 1px solid $darkLight;
+  background-color: transparent;
+  outline: none;
+  &:focus {
+    border: 1px solid $blue;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @include MediaQuery($desktop) {
+    font-size: 0.6em;
+  }
+}
+
+.textArea {
+  resize: none;
+  width: 100%;
+  height: 170px;
+  margin-top: 6px;
+  font-family: $poppins;
+  font-size: 0.9em;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid $darkLight;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.6em;
+    height: 100px;
+  }
+}

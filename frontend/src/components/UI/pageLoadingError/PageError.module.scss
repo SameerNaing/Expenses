@@ -1,0 +1,29 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.container {
+  width: 80%;
+  margin: 15% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-family: $openSans;
+  font-weight: 400;
+  color: $darkLight;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.86em;
+  }
+}
+.button {
+  margin-top: 20px;
+  border: 1px solid $blue;
+  background-color: transparent;
+  color: $blue;
+  padding: 5px;
+  font-family: $poppins;
+  cursor: pointer;
+}

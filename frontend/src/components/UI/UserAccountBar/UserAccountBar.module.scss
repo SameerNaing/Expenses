@@ -1,0 +1,52 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.appBarContainer {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $greyWhite;
+  @include MediaQuery($desktop) {
+    width: 100%;
+  }
+}
+
+.imgUsernameContainer {
+  display: flex;
+  padding-left: 12px;
+  align-items: center;
+  height: 100%;
+  @include MediaQuery($desktop) {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 35px;
+  }
+}
+
+.profileImg {
+  height: 55%;
+  @include MediaQuery($desktop) {
+    height: 50%;
+  }
+}
+
+.username {
+  font-family: $poppins;
+  font-size: 0.75em;
+  margin-left: 12px;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.6em;
+  }
+}
+
+.logoutButton {
+  background-color: transparent;
+  border: none;
+  margin-right: 20px;
+  @include MediaQuery($desktop) {
+    display: none;
+  }
+}

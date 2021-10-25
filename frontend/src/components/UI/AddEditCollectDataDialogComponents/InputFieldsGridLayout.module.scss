@@ -1,0 +1,15 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+
+  @include MediaQuery($desktop) {
+    margin-bottom: 12px;
+    column-gap: 12px;
+    row-gap: 12px;
+    grid-template-columns: 1fr 1fr;
+  }
+}

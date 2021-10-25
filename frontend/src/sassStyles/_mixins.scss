@@ -1,0 +1,61 @@
+@import "./variables";
+
+@mixin MediaQuery($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Layout Design for ForgotPassword, VerifyEmail and ResetPassword Componenets  */
+@mixin Layout {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Form Design for ForgotPassword, VerifyEmail and ResetPassword Componenets */
+@mixin Form {
+  width: 60%;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Table Design for Transactions, Investment and Lend/Borrow Data Table */
+@mixin table {
+  width: 90%;
+  border-collapse: collapse; // remove gap between two columns border
+  margin-bottom: 100px; // avoid bottom nav bar and floating action button
+}
+
+/* th tag design for Transactions, Investment and Lend/Borrow Data Table */
+@mixin th {
+  padding: 5px 0; // to have space between table header text and top, bottom borders
+}
+
+/* add top and bottom borders to table headers  */
+@mixin tableHeaderBorders {
+  border-top: 1px solid #0000001c;
+  border-bottom: 1px solid #0000001c;
+}
+
+/* table data row design for Transaction, Lend/Borrow and Investment Data Table */
+@mixin tableDataRow {
+  border-bottom: 1px solid #0000001c;
+}
+
+/* Design of button when showing loading Status */
+@mixin buttonLoading {
+  opacity: 0.5;
+  cursor: progress;
+
+  &:hover {
+    background-color: $blue;
+  }
+}

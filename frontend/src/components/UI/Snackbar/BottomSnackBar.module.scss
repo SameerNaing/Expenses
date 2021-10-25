@@ -1,0 +1,13 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.alert {
+  margin-bottom: 60px;
+  @include MediaQuery($desktop) {
+    margin-bottom: 12px;
+  }
+}
+
+.message {
+  font-family: $openSans;
+}

@@ -1,0 +1,13 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.layout {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px auto 0 auto;
+
+  @include MediaQuery($desktop) {
+    margin-top: 20px;
+  }
+}

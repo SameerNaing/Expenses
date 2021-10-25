@@ -1,0 +1,74 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.inputErrorContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 20px auto;
+  font-family: $poppins;
+
+  @include MediaQuery($desktop) {
+    margin-top: 23px;
+  }
+
+  label {
+    display: none;
+    color: $darkLight;
+    font-weight: 500;
+    font-size: 0.8em;
+    @include MediaQuery($tablet) {
+      display: block;
+    }
+    @include MediaQuery($desktop) {
+      font-size: 0.6em;
+      margin-bottom: 3px;
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $darkLight;
+    padding-bottom: 7px;
+    font-family: inherit;
+    background-color: $white;
+    font-size: 0.8em;
+    @include MediaQuery($tablet) {
+      border: 1px solid $darkLight;
+      padding: 15px;
+      border-radius: 6px;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+    @include MediaQuery($desktop) {
+      padding: 6px;
+      font-size: 0.57em;
+      border: 1px solid rgba(0, 0, 0, 0.281);
+    }
+    &:focus {
+      border-bottom: 1px solid $blue;
+      @include MediaQuery($tablet) {
+        border: 1px solid $blue;
+      }
+    }
+  }
+
+  /* Error Text */
+  p {
+    font-family: $openSans;
+    font-weight: 700;
+    color: $red;
+    font-size: 0.7em;
+    margin-top: 2px;
+    @include MediaQuery($desktop) {
+      font-size: 0.5em;
+    }
+  }
+}
+.errorBorder {
+  border-bottom: 1px solid $red !important;
+  @include MediaQuery($tablet) {
+    border: 1px solid $red !important;
+  }
+}

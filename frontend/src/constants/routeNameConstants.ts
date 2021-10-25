@@ -1,0 +1,10 @@
+export const INITIAL_ROUTE: string = "/";
+export const LOGIN_ROUTE: string = "/login";
+export const REGISTER_ROUTE: string = "/register";
+export const FORGOT_PASSWORD_ROUTE: string = "/forgotPassword";
+export const VERIFY_EMAIL_ROUTE: string = "/verifyEmail";
+export const RESET_PASSWORD_ROUTE: string = "/resetPassword";
+export const OVERVIEW_ROUTE: string = "/overview";
+export const TRANSACTIONS_ROUTE: string = "/transactions";
+export const INVESTMENTS_ROUTE: string = "/investments";
+export const LENDBORROW_ROUTE: string = "/lendBorrow";

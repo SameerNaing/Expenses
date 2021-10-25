@@ -1,0 +1,24 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.ptag {
+  width: 100%;
+  text-align: center;
+  opacity: 0.6;
+  border-bottom: 1px solid $darkLight;
+  line-height: 0.1em;
+  margin-top: 40px;
+  color: $darkLight;
+  font-size: 0.72em;
+  font-family: $poppins;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.5em;
+    margin-top: 25px;
+  }
+
+  span {
+    background: $white;
+    padding: 0 10px;
+  }
+}

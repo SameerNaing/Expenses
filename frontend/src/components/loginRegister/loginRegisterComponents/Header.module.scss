@@ -1,0 +1,17 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.headerText {
+  color: $dark;
+  font-family: $openSans;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 12px;
+  @include MediaQuery($tablet) {
+    font-size: 1.6em;
+  }
+  @include MediaQuery($desktop) {
+    font-size: 1.2em;
+    text-align: start;
+  }
+}

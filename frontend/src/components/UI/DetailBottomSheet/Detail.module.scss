@@ -1,0 +1,10 @@
+@import "../../../sassStyles/variables";
+
+.detailContainer {
+  color: $dark;
+  font-family: $openSans;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  font-weight: 600;
+}

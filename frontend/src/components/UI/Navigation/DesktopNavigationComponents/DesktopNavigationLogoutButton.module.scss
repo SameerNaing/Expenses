@@ -1,0 +1,20 @@
+@import "../../../../sassStyles/variables";
+
+.logoutButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 12px;
+  border-radius: 12px;
+  width: 90px;
+  cursor: pointer;
+
+  span {
+    margin-top: 12px;
+    color: $red;
+    font-family: $openSans;
+    font-weight: 600;
+  }
+}

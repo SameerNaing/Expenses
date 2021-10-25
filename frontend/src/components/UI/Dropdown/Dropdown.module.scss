@@ -1,0 +1,16 @@
+@import "../../../sassStyles/variables";
+
+.dropdown {
+  padding: 7px;
+  border-radius: 12px;
+  font-family: $poppins;
+  margin-top: 12px; // wrapped bottom item to have space on top for phone view
+  margin-right: 12px;
+  background-color: transparent;
+  border: 1px solid $dark;
+  outline: none;
+
+  &:disabled {
+    border: 1px solid rgba(128, 128, 128, 0.479);
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../sassStyles/mixins";
+
+.verifyEmailContainer {
+  @include Layout;
+  form {
+    @include Form;
+  }
+}

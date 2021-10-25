@@ -1,0 +1,49 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.layoutContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.navigationContainer {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+  max-width: 250px;
+  background-color: $blue;
+
+  /* in small laptops side navigation can scroll*/
+  overflow-y: scroll;
+  @include hideScrollbar;
+
+  .logoContainer {
+    height: 21%;
+    min-height: 120px;
+    max-height: 300px;
+  }
+
+  .navigationItemsContainer {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logoutButtonContainer {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.childrenContainer {
+  flex: 1 0 auto;
+  overflow-y: scroll;
+}

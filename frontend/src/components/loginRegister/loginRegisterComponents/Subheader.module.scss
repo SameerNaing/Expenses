@@ -1,0 +1,23 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.subHeaderText {
+  color: $darkLight;
+  font-family: $poppins;
+  font-weight: 300;
+  text-align: center;
+  width: 200px;
+  margin: 12px auto 0 auto;
+  font-size: 0.7em;
+
+  @include MediaQuery($tablet) {
+    font-size: 0.8em;
+    width: 200px;
+  }
+  @include MediaQuery($desktop) {
+    font-size: 0.55em;
+    text-align: start;
+    width: 100%;
+    margin: 15px 0 0 0;
+  }
+}

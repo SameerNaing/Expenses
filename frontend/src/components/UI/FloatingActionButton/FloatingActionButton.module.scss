@@ -1,0 +1,20 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.floatingActionButton {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: $yellow;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  bottom: 76px;
+  right: 12px;
+  z-index: 1;
+
+  @include MediaQuery($desktop) {
+    display: none;
+  }
+}

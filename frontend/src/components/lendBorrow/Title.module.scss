@@ -1,0 +1,15 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.title {
+  font-family: $openSans;
+  color: $dark;
+  width: 90%;
+  margin: 40px auto 0 auto;
+  font-size: 0.9em;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.75em;
+    color: $dark;
+  }
+}

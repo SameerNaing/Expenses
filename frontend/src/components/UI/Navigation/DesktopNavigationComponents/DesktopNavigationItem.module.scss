@@ -1,0 +1,30 @@
+@import "../../../../sassStyles/variables";
+
+.link {
+  width: 90%;
+  text-decoration: none;
+
+  margin-bottom: 40px;
+}
+.itemButton {
+  padding: 12px 0 12px 39px;
+
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  background-color: transparent;
+  color: $white;
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+.itemName {
+  margin-left: 20px;
+  font-family: $openSans;
+  font-size: 0.6em;
+}

@@ -1,0 +1,11 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.layout {
+  margin: 40px auto 0 auto;
+  max-width: 500px;
+
+  @include MediaQuery($desktop) {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.table {
+  margin: 45px auto 0 auto;
+  @include table;
+}
+
+.thead {
+  font-size: 0.65em;
+  font-family: $openSans;
+  color: #00000094;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.55em;
+  }
+
+  tr {
+    @include tableHeaderBorders;
+  }
+  th {
+    @include th;
+    text-align: start;
+  }
+
+  .hideHeader {
+    display: none;
+    @include MediaQuery($desktop) {
+      display: table-cell;
+    }
+  }
+}
+
+.dataRow {
+  @include tableDataRow;
+  @include MediaQuery($desktop) {
+    vertical-align: super;
+  }
+}
+
+.dataRow td {
+  padding-bottom: 30px; // space between border bottom and data items
+  padding-top: 30px; // space between two table rows
+}
+
+.nameCell {
+  width: 40%;
+  @include MediaQuery($desktop) {
+    width: 13%;
+  }
+}
+
+.notesCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    font-family: $poppins;
+    font-size: 0.55em;
+    max-width: 200px;
+    width: 42%;
+  }
+}
+
+.statusCell {
+  width: 30%;
+  font-family: $poppins;
+  font-size: 0.7em;
+  font-weight: 500;
+
+  @include MediaQuery($desktop) {
+    width: 10%;
+    font-weight: 400;
+    font-size: 0.55em;
+  }
+
+  div {
+    max-width: 50px;
+  }
+}
+
+.dateCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    width: 10%;
+    font-size: 0.5em;
+    font-family: $openSans;
+    font-weight: 600;
+  }
+}
+
+.dueDateCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    width: 10%;
+    font-weight: 600;
+    font-family: $openSans;
+    font-size: 0.5em;
+  }
+}
+
+.amountCell {
+  font-family: $poppins;
+  font-size: 0.9em;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.7em;
+  }
+}
+
+.moreButtonCell {
+  width: 6%;
+  position: relative;
+}

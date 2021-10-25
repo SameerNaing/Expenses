@@ -1,0 +1,44 @@
+@import "../../../../sassStyles/variables";
+@import "../../../../sassStyles/mixins";
+
+.itemDesignContainer {
+  margin: 30px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px; // to avoid bottom Navigation in Mobile and Tablet view
+  border-bottom: 1px solid rgba(128, 128, 128, 0.253);
+
+  @include MediaQuery($desktop) {
+    flex-direction: column;
+    width: 120px;
+    border: none;
+    border-radius: 12px;
+    margin: 0% 18px 0 0;
+  }
+}
+
+.svgBackgroundContainer {
+  height: 50px;
+  width: 50px;
+}
+
+.categoryName {
+  font-family: $openSans;
+  font-size: 0.8em;
+  text-align: center;
+  font-weight: 600;
+  @include MediaQuery($desktop) {
+    font-size: 0.65em;
+    margin-top: 5px;
+  }
+}
+
+.spent {
+  font-family: $poppins;
+  font-size: 0.8em;
+  @include MediaQuery($desktop) {
+    font-size: 0.65em;
+    margin-top: 3px;
+  }
+}

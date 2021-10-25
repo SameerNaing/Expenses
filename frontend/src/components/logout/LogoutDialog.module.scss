@@ -1,0 +1,32 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.logoutDialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: 90%;
+  max-width: 350px;
+  height: 150px;
+  background-color: $white;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+
+  @include MediaQuery($desktop) {
+  }
+
+  p {
+    text-align: center;
+    font-family: $poppins;
+    font-size: 0.9em;
+    margin-top: 30px;
+    @include MediaQuery($desktop) {
+      font-size: 0.7em;
+    }
+  }
+}
+
+.buttonLayout {
+  margin-top: 35px;
+}

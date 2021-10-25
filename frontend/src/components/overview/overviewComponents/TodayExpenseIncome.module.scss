@@ -1,0 +1,54 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.todayExpenseIncomeContainer {
+  width: 95%;
+  height: 97%;
+  background-color: $dark;
+  border-radius: 30px;
+  margin: auto;
+  position: relative;
+  max-width: 550px;
+
+  @include MediaQuery($desktop) {
+    padding: 0;
+    max-width: none;
+  }
+}
+.titleText {
+  color: $white;
+  font-family: $openSans;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 20px 0 0 20px;
+
+  margin: auto;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.9em;
+  }
+}
+
+.noData {
+  font-size: 0.75em;
+  color: $greyWhite;
+  opacity: 0.8;
+  font-family: $poppins;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include MediaQuery($desktop) {
+    font-size: 0.6em;
+  }
+}
+
+.donutChartContainer {
+  bottom: 0;
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, 0%);
+}

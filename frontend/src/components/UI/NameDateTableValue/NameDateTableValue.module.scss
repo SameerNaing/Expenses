@@ -1,0 +1,30 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.nameDateContainer {
+  color: $dark;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+  padding: 5px;
+}
+
+.name {
+  font-family: $poppins;
+  font-size: 0.9em;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.64em;
+  }
+}
+
+.date {
+  font-family: $openSans;
+  font-weight: 600;
+  font-size: 0.6em;
+
+  @include MediaQuery($desktop) {
+    display: none;
+  }
+}

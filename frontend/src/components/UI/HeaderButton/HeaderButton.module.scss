@@ -1,0 +1,39 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.headerButtonContainer {
+  width: 95%;
+  margin: auto;
+  padding-top: 12px;
+
+  @include MediaQuery($desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.headerText {
+  font-family: $openSans;
+  font-size: 1.15em;
+}
+
+.addButton {
+  display: none;
+
+  @include MediaQuery($desktop) {
+    background-color: $blue;
+    border: none;
+
+    color: $white;
+    width: 80px;
+    border-radius: 12px;
+    font-family: $poppins;
+    display: inline;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  &:hover {
+    background-color: darken($blue, 12);
+  }
+}

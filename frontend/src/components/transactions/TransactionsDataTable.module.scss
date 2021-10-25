@@ -1,0 +1,96 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.table {
+  margin: 10px auto 0 auto;
+  @include table;
+  @include MediaQuery($desktop) {
+    margin-top: 40px;
+  }
+}
+
+.thead {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-header-group;
+    font-size: 0.55em;
+    font-family: $openSans;
+    color: #00000094;
+  }
+  tr {
+    @include tableHeaderBorders;
+  }
+  th {
+    @include th;
+    text-align: start;
+  }
+}
+
+.dataRow {
+  @include tableDataRow;
+  @include MediaQuery($desktop) {
+    vertical-align: super;
+  }
+}
+
+.dataRow td {
+  padding-bottom: 15px; // space between border bottom and data items
+  padding-top: 20px; // space between two table rows
+}
+
+.categoryNameIconCell {
+  width: 70%;
+
+  @include MediaQuery($desktop) {
+    width: 25%;
+  }
+}
+
+.notesCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    max-width: 200px;
+    width: 30%;
+    font-size: 0.6em;
+    font-family: $poppins;
+    color: $dark;
+  }
+}
+
+.dateCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    width: 20%;
+    font-size: 0.6em;
+    font-family: $poppins;
+    color: $dark;
+  }
+}
+
+.amountCell {
+  width: 30%;
+  font-family: $poppins;
+  text-align: end;
+  font-size: 0.9em;
+
+  @include MediaQuery($desktop) {
+    width: 20%;
+    font-size: 0.7em;
+    text-align: start;
+  }
+}
+
+.moreButtonCell {
+  padding: 3px 0 0 5px;
+  position: relative;
+
+  .moreButton {
+    background-color: transparent;
+    margin: auto;
+    width: 20px;
+    cursor: pointer;
+    border: none;
+  }
+}

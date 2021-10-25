@@ -1,0 +1,113 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.table {
+  margin: 30px auto 0 auto;
+  @include table;
+  @include MediaQuery($desktop) {
+    margin-top: 40px;
+  }
+}
+
+.thead {
+  font-size: 0.65em;
+  font-family: $openSans;
+  color: #00000094;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.55em;
+  }
+
+  tr {
+    @include tableHeaderBorders;
+  }
+  th {
+    @include th;
+    text-align: start;
+  }
+
+  .hideHeader {
+    display: none;
+    @include MediaQuery($desktop) {
+      display: table-cell;
+    }
+  }
+}
+
+.dataRow {
+  td {
+    padding: 25px 0; // item spacing with uppder border and lower border
+  }
+  @include tableDataRow;
+  @include MediaQuery($desktop) {
+    vertical-align: super;
+  }
+}
+
+.nameCell {
+  width: 40%;
+  @include MediaQuery($desktop) {
+    width: 20%;
+  }
+}
+
+.notesCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    font-family: $poppins;
+    font-size: 0.55em;
+    font-weight: 500;
+    max-width: 200px;
+
+    width: 30%;
+  }
+}
+
+.statusCell {
+  width: 30%;
+  font-family: $poppins;
+  font-size: 0.7em;
+  font-weight: 500;
+
+  @include MediaQuery($desktop) {
+    width: 8%;
+    font-weight: 400;
+    font-size: 0.55em;
+  }
+}
+
+.dateCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    width: 12%;
+    font-size: 0.5em;
+    font-family: $openSans;
+    font-weight: 600;
+  }
+}
+
+.profitedAmountCell {
+  display: none;
+  @include MediaQuery($desktop) {
+    display: table-cell;
+    width: 18%;
+    font-family: $poppins;
+    font-size: 0.7em;
+  }
+}
+
+.investedAmountCell {
+  font-family: $poppins;
+  font-size: 0.9em;
+
+  @include MediaQuery($desktop) {
+    font-size: 0.7em;
+  }
+}
+
+.moreButtonCell {
+  width: 6%;
+  position: relative;
+}

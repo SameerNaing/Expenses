@@ -1,0 +1,30 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.button,
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  padding: 5px 15px;
+  font-family: $openSans;
+  text-align: start;
+  font-size: 0.9em;
+
+  width: 100%;
+
+  &:hover {
+    background-color: darken($white, 6);
+  }
+
+  @include MediaQuery($desktop) {
+    font-size: 0.65em;
+  }
+}
+
+.button {
+  color: $darkLight;
+}
+
+.deleteButton {
+  color: $red;
+}

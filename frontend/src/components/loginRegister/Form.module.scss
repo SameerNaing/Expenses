@@ -1,0 +1,31 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+/* Mobile and Tablet view app-logo design */
+.mtLogo {
+  @include MediaQuery($desktop) {
+    display: none;
+  }
+}
+
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+  max-width: 500px; // for both mobile and tablet
+  margin: 0 auto 12px auto;
+  // padding: 20px 0;
+
+  @include MediaQuery($desktop) {
+    width: 75%;
+  }
+
+  form {
+    width: 100%;
+    margin-top: 30px;
+    @include MediaQuery($desktop) {
+      margin-top: 20px;
+    }
+  }
+}

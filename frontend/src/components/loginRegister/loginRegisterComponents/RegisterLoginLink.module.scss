@@ -1,0 +1,27 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.registerLoginLinkContainer {
+  display: flex;
+  font-size: 0.66em;
+  justify-content: center;
+  margin-top: 40px;
+
+  @include MediaQuery($desktop) {
+    margin-top: 40px;
+    font-size: 0.55em;
+    justify-content: flex-start;
+  }
+
+  p {
+    font-family: $openSans;
+    font-weight: 400;
+    color: $darkLight;
+  }
+  a {
+    font-family: $poppins;
+    color: $blue;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+}
