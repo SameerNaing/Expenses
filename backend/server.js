@@ -35,6 +35,6 @@ app.use("/lendBorrow", lendBorrowRoutes);
 app.listen(
   process.env.PORT || 8000,
   console.log(
-    `Server Started http://192.168.99.104:${process.env.PORT || 8000}`
+    `Server Started on Port :${process.env.PORT || 8000}`
   )
 );
