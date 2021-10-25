@@ -3,7 +3,6 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import UserModel from "../models/userModel";
 import { VERIFY_TOKEN } from "../constants/localStorageKeys";
 
-// const baseUrl = "https://expenses-000.herokuapp.com";
 const baseUrl = "http://localhost:8000";
 
 axios.interceptors.request.use(
