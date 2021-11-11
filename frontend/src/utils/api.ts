@@ -21,7 +21,7 @@ axios.interceptors.request.use(
 
     /** if verify token exists in local storage, then send it in header  */
     if (verifyToken) {
-      config.data["authorization"] = `Bearer ${verifyToken}`;
+      config.headers["authorization"] = `Bearer ${verifyToken}`;
     }
     return config;
   },
